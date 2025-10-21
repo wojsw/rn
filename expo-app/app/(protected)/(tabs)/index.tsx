@@ -42,6 +42,7 @@ export default function HomeScreen() {
             <ThemedText type="subtitle">Step 2: Explore</ThemedText>
           </Link.Trigger>
           <Link.Preview />
+          <ThemedText type="subtitle">Step 2: Explore second</ThemedText>
           <Link.Menu>
             <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
             <Link.MenuAction
