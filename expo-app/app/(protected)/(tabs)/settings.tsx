@@ -1,16 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View, Button } from 'react-native'
 import React, {useContext} from 'react'
 import { AuthContext } from '@/utils/authContext';
 import { Redirect } from 'expo-router';
+import { ThemedText } from '@/components/themed-text';
 
 const Settings = () => {
-    const { isLoggedIn, login, logout } = useContext(AuthContext);
+    const { isLoggedIn, logout } = useContext(AuthContext);
     if (!isLoggedIn) {
         return <Redirect href="/login" />
     }
   return (
     <View>
-      <Text>settings</Text>
+      <ThemedText align="center">settings</ThemedText>
+      <Button title="Logout" onPress={() => logout()} />
     </View>
   )
 }
