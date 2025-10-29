@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { StatusBar } from 'expo-status-bar';
 
 export default function ModalScreen() {
   return (
@@ -11,6 +12,7 @@ export default function ModalScreen() {
       <Link href="/" dismissTo style={styles.link}>
         <ThemedText type="link">Go to home screen</ThemedText>
       </Link>
+      <StatusBar style="light" />
     </ThemedView>
   );
 }
