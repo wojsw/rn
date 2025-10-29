@@ -6,6 +6,7 @@ import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { Link } from 'expo-router';
+import MyModule from '@/modules/my-module';
 
 export default function HomeScreen() {
   return (
@@ -75,6 +76,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <ThemedText>{MyModule.hello()}</ThemedText>
     </ParallaxScrollView>
   );
 }
